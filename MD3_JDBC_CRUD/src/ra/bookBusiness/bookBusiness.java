@@ -109,6 +109,8 @@ public class bookBusiness {
             }
         } catch (Exception ex) {
             ex.printStackTrace();
+        } finally {
+            ConnectionDB.closeConnection(con, callSt);
         }
         return book;
     }
